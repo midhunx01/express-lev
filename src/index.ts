@@ -1,1 +1,1 @@
-export { logger, httpLogger } from "./util/index.js";
+export { logger, httpLogger } from "./util/logger";
