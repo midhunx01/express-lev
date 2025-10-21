@@ -1,16 +1,18 @@
-import dotenv from "dotenv";
-import fs from "fs";
-import path from "path";
 import pino from "pino";
 import { pinoHttp } from "pino-http";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from 'url';
+import dotenv from "dotenv";
 dotenv.config();
 
 const isProd = process.env.APP_ENV == "production";
 
-const __dirname = path.resolve();
-const logDir = path.join(__dirname, "logs");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Ensure logs directory exists
+const logDir = path.resolve(__dirname, "../logs");
 if (isProd && !fs.existsSync(logDir)) {
   fs.mkdirSync(logDir, { recursive: true });
 }
