@@ -1,6 +1,6 @@
 {
   "name": "express-lev",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Logger, Error handling, and Validation utilities for Express TypeScript apps",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
