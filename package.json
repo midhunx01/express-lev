@@ -44,7 +44,7 @@
   "scripts": {
     "clean": "del-cli ./dist/*",
     "build": "npm run clean && tsc",
-    "release": "npm version patch && npm run dist && npm publish"
+    "release": "npm version patch && npm run build && npm publish"
   },
   "dependencies": {
     "@sinclair/typebox": "^0.34.41",
