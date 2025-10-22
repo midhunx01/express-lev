@@ -1,36 +1,18 @@
 {
   "compilerOptions": {
-    /* Language and Environment */
-    "target": "ES2022" /* Updated from es2016 for better ESM support */,
-    "experimentalDecorators": true,
-
-    /* Modules */
-    "module": "ESNext" /* Changed from commonjs to ESNext for ESM */,
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
     "rootDir": "./src",
-    "moduleResolution": "node" /* Uncommented - required for ESM */,
-    "resolveJsonModule": true /* Uncommented - useful for importing JSON files */,
-    "typeRoots": ["./node_modules/@types", "./src/types"],
-
-    /* JavaScript Support */
-    "allowJs": true /* Uncommented - allows JS files in your project */,
-
-    /* Emit */
-    "outDir": "./dist",
-    "sourceMap": true /* Uncommented - helpful for debugging */,
-
-    /* Interop Constraints */
-    "isolatedModules": true /* Uncommented - required for esbuild */,
-    "allowSyntheticDefaultImports": true /* Uncommented - better import syntax */,
+    "outDir": "./build",
+    "declaration": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-
-    /* Type Checking */
+    "isolatedModules": true,
     "strict": true,
-    "noImplicitAny": false,
-    "strictPropertyInitialization": false,
-
-    /* Completeness */
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*", "tsconfig.json"]
+  "include": ["src"]
 }

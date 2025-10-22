@@ -1,48 +1,24 @@
 {
   "name": "express-lev",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Logger, Error handling, and Validation utilities for Express TypeScript apps",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "keywords": [
-    "express",
-    "typescript",
-    "logger",
-    "pino",
-    "validation",
-    "dto",
-    "error-handling",
-    "typebox"
-  ],
-  "author": "midhunx01",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/midhunx01/express-lev.git"
-  },
-  "bugs": {
-    "url": "https://github.com/midhunx01/express-lev/issues"
-  },
-  "homepage": "https://github.com/midhunx01/express-lev#readme",
-  "files": [
-    "/dist/**/*",
-    "README.md",
-    "LICENSE"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "type": "module",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "default": "./dist/index.js"
+      "import": "./build/index.js",
+      "types": "./build/index.d.ts"
     },
     "./package.json": "./package.json"
   },
+  "files": [
+    "build/**/*",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "clean": "del-cli ./dist/*",
+    "clean": "del-cli ./build/*",
     "build": "npm run clean && tsc",
     "release": "npm version patch && npm run build && npm publish"
   },
@@ -63,5 +39,14 @@
     "@types/node": "^24.7.0",
     "del-cli": "^7.0.0",
     "typescript": "^5.9.3"
+  },
+  "license": "MIT",
+  "author": "midhunx01",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/midhunx01/express-lev.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
